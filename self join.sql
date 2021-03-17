@@ -1,9 +1,18 @@
---select * from [FirstDB].[dbo].[order]
+select * from [FirstDB].[dbo].[order]
+select * from [FirstDB].[dbo].[user]
+select * from [FirstDB].[dbo].[product]
+
 
 --insert into [FirstDB].[dbo].[order] (order_id,status) values ('2','Processed')
-select [FirstDB].[dbo].[product].name, [FirstDB].[dbo].[user].user_name, [FirstDB].[dbo].[order].status
-from [FirstDB].[dbo].[product]
-Join [FirstDB].[dbo].[user]
-on [FirstDB].[dbo].[product].product_id = [FirstDB].[dbo].[user].user_id
-join [FirstDB].[dbo].[order]
-on [FirstDB].[dbo].[order].order_id = [FirstDB].[dbo].[product].product_id
+
+select * from [FirstDB].[dbo].[order] Cross join [FirstDB].[dbo].[user] 
+
+--select * from [FirstDB].[dbo].[order],[FirstDB].[dbo].[user]
+
+--select user_name from [FirstDB].[dbo].[user]
+--Union 
+--select user_name from [FirstDB].[dbo].[product] 
+
+--select * into [FirstDB].[dbo].[copy] from [FirstDB].[dbo].[user]
+
+--select * from [FirstDB].[dbo].[copy]
