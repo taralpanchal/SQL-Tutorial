@@ -1,13 +1,6 @@
---select * from [FirstDB].[dbo].[order]
---select * from [FirstDB].[dbo].[user]
---select * from [FirstDB].[dbo].[product]
 
-
---insert into [FirstDB].[dbo].[order] (order_id,status) values ('2','Processed')
-
-
-
-
-select * into [FirstDB].[dbo].[copy] from [FirstDB].[dbo].[user]
-
-select * from [FirstDB].[dbo].[copy]
+select user_id,
+count(user_id) 
+from [FirstDB].[dbo].[user] 
+group by user_id
+order by user_id desc
